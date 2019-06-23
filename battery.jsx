@@ -9,7 +9,7 @@ export const className = battery;
 
 export const render = ({ output }) => (
   <div>
-    <i class="fas fa-battery-full" style={{ color: 'red' }} />
+    <i className="fas fa-battery-full" style={{ color: 'red' }} />
     &nbsp;
     {output}
   </div>

@@ -8,7 +8,7 @@ export const className = cpu;
 
 export const render = ({ output }) => (
   <div>
-    <i class="fas fa-microchip" style={{ color: 'red' }} />
+    <i className="fas fa-microchip" style={{ color: 'red' }} />
     &nbsp;
     {output}
   </div>

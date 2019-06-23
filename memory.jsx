@@ -12,7 +12,7 @@ export const className = memory;
 
 export const render = ({ output }) => (
   <div>
-    <i class="fas fa-memory" style={{ color: 'red' }} />
+    <i className="fas fa-memory" style={{ color: 'red' }} />
     &nbsp;
     {output}
   </div>
