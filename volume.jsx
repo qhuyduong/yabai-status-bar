@@ -1,15 +1,32 @@
+import get from 'lodash/fp/get';
 import { volume } from './style.jsx';
+import { parse } from './helpers.jsx';
 
-export const command = "osascript -e 'output volume of (get volume settings)'";
+export const command = 'sh yabai-status-bar/scripts/volume.sh';
 
 export const refreshFrequency = 500; // ms
 
 export const className = volume;
 
-export const render = ({ output }) => (
-  <div>
-    <i className="fas fa-volume-up" />
-    &nbsp;
-    {output}
-  </div>
-);
+const iconPicker = (level, muted) => {
+  if (muted === 'true' || level < 10) {
+    return 'fa-volume-mute';
+  } else if (level < 50) {
+    return 'fa-volume-down';
+  } else {
+    return 'fa-volume-up';
+  }
+};
+
+export const render = ({ output }) => {
+  let data = parse(output);
+  console.log(data);
+
+  return (
+    <div>
+      <i
+        className={`fas ${iconPicker(get('level')(data), get('muted')(data))}`}
+      />
+    </div>
+  );
+};

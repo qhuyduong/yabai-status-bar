@@ -26,18 +26,7 @@ export const memory = {
   fontFamily: 'Helvetica Neue',
   fontSize: container.fontSize,
   height: container.height,
-  right: 300,
-  zIndex: 1,
-};
-
-export const volume = {
-  alignItems: 'center',
-  color: container.color,
-  display: 'flex',
-  fontFamily: 'Helvetica Neue',
-  fontSize: container.fontSize,
-  height: container.height,
-  right: 240,
+  right: 245,
   zIndex: 1,
 };
 
@@ -48,7 +37,18 @@ export const wifi = {
   fontFamily: 'Helvetica Neue',
   fontSize: container.fontSize,
   height: container.height,
-  right: 160,
+  right: 165,
+  zIndex: 1,
+};
+
+export const volume = {
+  alignItems: 'center',
+  color: container.color,
+  display: 'flex',
+  fontFamily: 'Helvetica Neue',
+  fontSize: container.fontSize,
+  height: container.height,
+  right: 135,
   zIndex: 1,
 };
 
@@ -59,7 +59,7 @@ export const battery = {
   fontFamily: 'Helvetica Neue',
   fontSize: container.fontSize,
   height: container.height,
-  right: 100,
+  right: 90,
   zIndex: 1,
 };
 
