@@ -8,7 +8,7 @@ export const className = volume;
 
 export const render = ({ output }) => (
   <div>
-    <i className="fas fa-volume-up" style={{ color: 'red' }} />
+    <i className="fas fa-volume-up" />
     &nbsp;
     {output}
   </div>

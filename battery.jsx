@@ -1,17 +1,10 @@
 import get from 'lodash/fp/get';
 import { battery } from './style.jsx';
+import { parse } from './helpers.jsx';
 
 export const command = 'sh yabai-status-bar/scripts/battery.sh';
 
 export const refreshFrequency = 2000; // ms
-
-const parse = input => {
-  try {
-    return JSON.parse(input);
-  } catch (e) {
-    return undefined;
-  }
-};
 
 export const className = battery;
 

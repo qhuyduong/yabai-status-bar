@@ -8,7 +8,7 @@ export const className = wifi;
 
 export const render = ({ output }) => (
   <div>
-    <i className="fas fa-wifi" style={{ color: 'red' }} />
+    <i className="fas fa-wifi" />
     &nbsp;
     {output}
   </div>

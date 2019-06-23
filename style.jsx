@@ -19,29 +19,6 @@ export const desktop = {
   zIndex: 1,
 };
 
-export const app = {
-  alignItems: 'center',
-  color: container.color,
-  display: 'flex',
-  fontFamily: 'Helvetica Neue',
-  fontSize: container.fontSize,
-  height: container.height,
-  left: '50%',
-  transform: 'translate(-50%, 0%)',
-  zIndex: 1,
-};
-
-export const cpu = {
-  alignItems: 'center',
-  color: container.color,
-  display: 'flex',
-  fontFamily: 'Helvetica Neue',
-  fontSize: container.fontSize,
-  height: container.height,
-  right: 450,
-  zIndex: 1,
-};
-
 export const memory = {
   alignItems: 'center',
   color: container.color,
@@ -60,7 +37,7 @@ export const volume = {
   fontFamily: 'Helvetica Neue',
   fontSize: container.fontSize,
   height: container.height,
-  right: 230,
+  right: 240,
   zIndex: 1,
 };
 
@@ -71,7 +48,7 @@ export const wifi = {
   fontFamily: 'Helvetica Neue',
   fontSize: container.fontSize,
   height: container.height,
-  right: 150,
+  right: 160,
   zIndex: 1,
 };
 
@@ -82,7 +59,7 @@ export const battery = {
   fontFamily: 'Helvetica Neue',
   fontSize: container.fontSize,
   height: container.height,
-  right: 90,
+  right: 100,
   zIndex: 1,
 };
 
@@ -93,6 +70,6 @@ export const time = {
   fontFamily: 'Helvetica Neue',
   fontSize: container.fontSize,
   height: container.height,
-  right: 10,
+  right: 20,
   zIndex: 1,
 };

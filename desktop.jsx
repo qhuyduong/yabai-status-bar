@@ -1,6 +1,7 @@
 import map from 'lodash/fp/map';
 import get from 'lodash/fp/get';
 import { desktop } from './style.jsx';
+import { parse } from './helpers.jsx';
 
 export const command = 'sh yabai-status-bar/scripts/desktop.sh';
 
@@ -9,14 +10,6 @@ export const refreshFrequency = 500; // ms
 export const className = desktop;
 
 const mapWithIndex = map.convert({ cap: false });
-
-const parse = input => {
-  try {
-    return JSON.parse(input);
-  } catch (e) {
-    return undefined;
-  }
-};
 
 const iconList = [
   'fi emacs-icon',

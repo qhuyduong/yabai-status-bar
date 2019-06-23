@@ -1,19 +1,21 @@
 import { memory } from './style.jsx';
 
-export const command = `
-MEMORY_FREE=$(memory_pressure | grep "Pages free" | grep -o -E '[0-9]+')
-MEMORY_TOTAL=$(memory_pressure | grep system | awk -F" " '{print $5}' | grep -o -E '[0-9]+')
-echo $MEMORY_FREE/$MEMORY_TOTAL
-`;
+export const command =
+  "top -l 1 | head -n 7 | grep PhysMem | egrep -o '[0-9]+' | tail -1";
 
 export const refreshFrequency = 5000; // ms
 
 export const className = memory;
 
-export const render = ({ output }) => (
-  <div>
-    <i className="fas fa-memory" style={{ color: 'red' }} />
-    &nbsp;
-    {output}
-  </div>
-);
+export const render = ({ output }) => {
+  console.log(output);
+  return (
+    <div>
+      <i className="fas fa-memory" />
+      &nbsp; Free:&nbsp;
+      {output < 1024
+        ? `${output}M`
+        : `${Math.round((output * 100) / 1024) / 100}G`}
+    </div>
+  );
+};
