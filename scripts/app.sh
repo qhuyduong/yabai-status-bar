@@ -6,5 +6,5 @@ jq=/usr/local/bin/jq
 APP=$($yabai -m query --windows --window)
 
 if [ $? -eq 0 ]; then
-    echo $APP | $jq .app
+    echo $APP | $jq .app | tr -d \"
 fi

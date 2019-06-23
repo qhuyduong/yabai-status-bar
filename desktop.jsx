@@ -1,6 +1,6 @@
 import { desktop } from './style.jsx';
 
-export const command = `sh yabai-status-bar/scripts/desktop.sh`;
+export const command = 'sh yabai-status-bar/scripts/desktop.sh';
 
 export const refreshFrequency = 500; // ms
 
