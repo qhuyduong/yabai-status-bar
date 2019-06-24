@@ -1,7 +1,4 @@
 export const container = {
-  background: '#1f1f1f',
-  borderBottom: 'solid 1px #181818',
-  boxShadow: '-2px 2px 2px 0px rgba(0,0,0,0.3)',
   color: '#a8a8a8',
   fontSize: 12,
   height: 25,
