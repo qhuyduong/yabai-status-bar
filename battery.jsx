@@ -4,7 +4,7 @@ import { parse } from './helpers.jsx';
 
 export const command = 'sh yabai-status-bar/scripts/battery.sh';
 
-export const refreshFrequency = 2000; // ms
+export const refreshFrequency = 5000; // ms
 
 export const className = battery;
 

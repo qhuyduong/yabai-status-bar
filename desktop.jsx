@@ -5,7 +5,7 @@ import { parse } from './helpers.jsx';
 
 export const command = 'sh yabai-status-bar/scripts/desktop.sh';
 
-export const refreshFrequency = 500; // ms
+export const refreshFrequency = false;
 
 export const className = desktop;
 

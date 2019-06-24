@@ -4,7 +4,7 @@ import { parse } from './helpers.jsx';
 
 export const command = 'sh yabai-status-bar/scripts/volume.sh';
 
-export const refreshFrequency = 500; // ms
+export const refreshFrequency = 5000; // ms
 
 export const className = volume;
 
