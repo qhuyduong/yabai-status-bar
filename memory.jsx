@@ -7,10 +7,20 @@ export const refreshFrequency = 5000; // ms
 
 export const className = memory;
 
+const memoryString = input => {
+  if (input <= 16) {
+    return `${input}G`;
+  } else if (input <= 1024) {
+    return `${input}M`;
+  } else {
+    return `${(input / 1024).toFixed(2)}G`;
+  }
+};
+
 export const render = ({ output }) => (
   <div>
     <i className="fas fa-memory" />
     &nbsp; Free:&nbsp;
-    {output < 1024 ? `${output}M` : `${(output / 1024).toFixed(2)}G`}
+    {memoryString(output)}
   </div>
 );
