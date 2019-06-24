@@ -20,7 +20,6 @@ const iconPicker = (level, muted) => {
 
 export const render = ({ output }) => {
   let data = parse(output);
-  console.log(data);
 
   return (
     <div>
