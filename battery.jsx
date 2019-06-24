@@ -11,16 +11,26 @@ export const className = battery;
 const iconPicker = (level, status) => {
   if (status === 'AC') {
     return 'fa-bolt';
-  } else if (level < 20) {
+  } else if (level < 10) {
     return 'fa-battery-empty';
-  } else if (level < 40) {
-    return 'fa-le-quarter';
-  } else if (level < 60) {
+  } else if (level < 20) {
+    return 'fa-battery-quarter';
+  } else if (level < 50) {
     return 'fa-battery-half';
   } else if (level < 80) {
     return 'fa-battery-three-quarters';
   } else {
     return 'fa-battery-full';
+  }
+};
+
+const iconColorPicker = level => {
+  if (level > 20) {
+    return '#09ff09';
+  } else if (level > 10 && level <= 20) {
+    return '#ffab12';
+  } else {
+    return 'red';
   }
 };
 
@@ -31,6 +41,9 @@ export const render = ({ output }) => {
     <div>
       <i
         className={`fas ${iconPicker(get('level')(data), get('status')(data))}`}
+        style={{
+          color: iconColorPicker(get('level')(data)),
+        }}
       />
       &nbsp;
       {get('level')(data)}

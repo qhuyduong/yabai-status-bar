@@ -23,7 +23,7 @@ export const memory = {
   fontFamily: 'Helvetica Neue',
   fontSize: container.fontSize,
   height: container.height,
-  right: 245,
+  right: 215,
   zIndex: 1,
 };
 
@@ -34,7 +34,7 @@ export const wifi = {
   fontFamily: 'Helvetica Neue',
   fontSize: container.fontSize,
   height: container.height,
-  right: 165,
+  right: 135,
   zIndex: 1,
 };
 
