@@ -1,4 +1,3 @@
-import { css } from 'uebersicht';
 import get from 'lodash/fp/get';
 import Memory from './components/memory.jsx';
 import Wifi from './components/wifi.jsx';
@@ -10,7 +9,7 @@ export const command = 'sh yabai-status-bar/scripts/right_bar.sh';
 
 export const refreshFrequency = 5000; // ms
 
-export const className = css`
+export const className = `
   right: 0;
 
   .right-bar {

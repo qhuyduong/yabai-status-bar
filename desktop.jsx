@@ -1,4 +1,3 @@
-import { css } from 'uebersicht';
 import map from 'lodash/fp/map';
 import get from 'lodash/fp/get';
 import { parse } from './helpers.jsx';
@@ -7,7 +6,7 @@ export const command = 'sh yabai-status-bar/scripts/desktop.sh';
 
 export const refreshFrequency = false;
 
-export const className = css`
+export const className = `
   color: #a8a8a8;
   font-family: Helvetica Neue;
 
