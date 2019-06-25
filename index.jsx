@@ -1,6 +1,4 @@
-import { container } from './style.jsx';
-
-export const className = container;
+export const refreshFrequency = false;
 
 export const render = () => (
   <div>

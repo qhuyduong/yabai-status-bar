@@ -1,13 +1,26 @@
+import { css } from 'uebersicht';
 import map from 'lodash/fp/map';
 import get from 'lodash/fp/get';
-import { desktop } from './style.jsx';
 import { parse } from './helpers.jsx';
 
 export const command = 'sh yabai-status-bar/scripts/desktop.sh';
 
 export const refreshFrequency = false;
 
-export const className = desktop;
+export const className = css`
+  color: #a8a8a8;
+  font-family: Helvetica Neue;
+
+  .desktop {
+    align-items: center;
+    color: #a8a8a8;
+    display: flex;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    height: 25px;
+    margin-left: 20px;
+  }
+`;
 
 const mapWithIndex = map.convert({ cap: false });
 
@@ -16,31 +29,22 @@ const iconList = [
   'fi terminal-icon',
   'fab fa-slack',
   'fab fa-chrome',
-  'fab fa-apple',
+  'fas fa-desktop',
 ];
 
 export const render = ({ output }) => {
   let data = parse(output);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        marginLeft: 20,
-        position: 'relative',
-      }}
-    >
+    <div className="desktop">
       {mapWithIndex((workspace, index) => (
         <div
           key={index}
           style={{
             marginRight: 25,
-            fontSize: 10,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            flexDirection: 'column',
           }}
         >
           <i
@@ -49,9 +53,6 @@ export const render = ({ output }) => {
                 ? iconList[iconList.length - 1]
                 : iconList[index]
             }
-            style={{
-              fontSize: 12,
-            }}
           />
           {workspace.index === get('active.index')(data) && (
             <div
@@ -59,7 +60,7 @@ export const render = ({ output }) => {
                 height: 1,
                 backgroundColor: '#bab72d',
                 width: 32,
-                top: 18,
+                top: 25,
                 alignSelf: 'bottom',
                 position: 'absolute',
               }}

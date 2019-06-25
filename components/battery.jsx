@@ -1,12 +1,4 @@
 import get from 'lodash/fp/get';
-import { battery } from './style.jsx';
-import { parse } from './helpers.jsx';
-
-export const command = 'sh yabai-status-bar/scripts/battery.sh';
-
-export const refreshFrequency = 5000; // ms
-
-export const className = battery;
 
 const iconPicker = (level, status) => {
   if (status === 'AC') {
@@ -34,19 +26,17 @@ const iconColorPicker = level => {
   }
 };
 
-export const render = ({ output }) => {
-  let data = parse(output);
+const Battery = ({ data }) => (
+  <div>
+    <i
+      className={`fas ${iconPicker(get('level')(data), get('status')(data))}`}
+      style={{
+        color: iconColorPicker(get('level')(data)),
+      }}
+    />
+    &nbsp;
+    {get('level')(data)}
+  </div>
+);
 
-  return (
-    <div>
-      <i
-        className={`fas ${iconPicker(get('level')(data), get('status')(data))}`}
-        style={{
-          color: iconColorPicker(get('level')(data)),
-        }}
-      />
-      &nbsp;
-      {get('level')(data)}
-    </div>
-  );
-};
+export default Battery;
