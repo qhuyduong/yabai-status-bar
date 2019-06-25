@@ -28,6 +28,7 @@ const iconList = [
   'fi terminal-icon',
   'fab fa-slack',
   'fab fa-chrome',
+  'fas fa-comments',
   'fas fa-desktop',
 ];
 
