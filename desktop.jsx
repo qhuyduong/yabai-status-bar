@@ -16,7 +16,7 @@ export const className = `
     display: flex;
     font-family: Helvetica Neue;
     font-size: 14px;
-    height: 25px;
+    height: 23px;
     margin-left: 20px;
   }
 `;
@@ -60,7 +60,7 @@ export const render = ({ output }) => {
                 height: 1,
                 backgroundColor: '#bab72d',
                 width: 32,
-                top: 25,
+                top: 23,
                 alignSelf: 'bottom',
                 position: 'absolute',
               }}

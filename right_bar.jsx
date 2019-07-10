@@ -17,7 +17,7 @@ export const className = `
     display: flex;
     font-family: Helvetica Neue;
     font-size: 14px;
-    height: 25px;
+    height: 23px;
     position: relative;
     right: 0;
   }
