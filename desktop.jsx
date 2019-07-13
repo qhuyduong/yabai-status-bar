@@ -26,8 +26,8 @@ const mapWithIndex = map.convert({ cap: false });
 const iconList = [
   'fi emacs-icon',
   'fi terminal-icon',
-  'fab fa-slack',
   'fab fa-chrome',
+  'fab fa-slack',
   'fas fa-comments',
   'fas fa-desktop',
 ];
