@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "eslint-plugin-prettier": "^3.1.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "prettier": "^1.18.2"
   },
   "eslintConfig": {
