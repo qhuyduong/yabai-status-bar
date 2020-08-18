@@ -2,10 +2,10 @@
 
 ## Screenshot
 ### Left bar
-![Left bar](https://imgur.com/XF9k5T9)
+![Left bar](https://i.imgur.com/rAz39o0.png)
 
 ### Right bar
-![Right bar](https://imgur.com/rAz39o0)
+![Right bar](https://i.imgur.com/XF9k5T9.png)
 
 ## Installation
 Clone this repo into Uebersicht widget folder (default `~/Library/Application\ Support/Übersicht/widgets/`) and install dependencies
